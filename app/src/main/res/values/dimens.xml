@@ -10,6 +10,11 @@
     <dimen name="image_height">128dp</dimen>
     <dimen name="image_mergin">8dp</dimen>
 
+    <!--Fragment ImageView params-->
+    <dimen name="data_image_width">256dp</dimen>
+    <dimen name="data_image_height">256dp</dimen>
+    <dimen name="data_image_mergin">8dp</dimen>
+
     <!--ListView Text params-->
     <dimen name="list_txt_large_size">32sp</dimen>
     <dimen name="list_txt_small_size">18sp</dimen>

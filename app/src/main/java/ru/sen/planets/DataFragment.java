@@ -1,41 +1,53 @@
 package ru.sen.planets;
 
 import android.app.Dialog;
-import android.app.ListFragment;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatDialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 
 public class DataFragment extends AppCompatDialogFragment {
 
     public static String mPlanetName = "planet name";
-    //public static String mPlanetDescription = "planet description";
-    //public static String mPlanetImage = "planet image";
-    //private static String ARG_SELECTED_ITEM = "selected item";
+    public static String mPlanetDescription = "planet description";
+    public static String mPlanetImage = "planet image";
 
-    public static DataFragment newInstance(View view) {
+    public static DataFragment newInstance(Profile planet) {
         DataFragment fragment = new DataFragment();
         Bundle args = new Bundle();
-        args.putString(mPlanetName, ((TextView) view).getText());
+        args.putString(mPlanetName, planet.getNamePlanet());
+        args.putString(mPlanetDescription, planet.getDscPlanet());
+        args.putInt(mPlanetImage, planet.getImgPlanet());
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        builder.setView(inflater.inflate(R.layout.data_layout, null))
-                .setTitle(getArguments().getString(mPlanetName));
-        //TextView
+        View dataView = inflater.inflate(R.layout.data_layout, null);
 
-        ListFragment
-        return super.onCreateDialog(savedInstanceState);
+        ImageView dataImagePlanet = (ImageView) dataView.findViewById(R.id.data_imageView);
+        dataImagePlanet.setImageResource(getArguments().getInt(mPlanetImage));
+
+        TextView dataNamePlanet = (TextView) dataView.findViewById(R.id.data_planet_dsc);
+        dataNamePlanet.setText(getArguments().getString(mPlanetDescription));
+
+        builder.setView(dataView)
+                .setTitle(getArguments().getString(mPlanetName))
+                .setPositiveButton(getString(R.string.txt_data_btn_positive), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        getDialog().cancel(); ;
+                    }
+                });
+
+        return builder.create();
     }
 }

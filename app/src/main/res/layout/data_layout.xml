@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/data_imageView"
+        android:layout_width="@dimen/data_image_width"
+        android:layout_height="@dimen/data_image_height"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/image_mergin"
+        />
+
+    <TextView
+        android:id="@+id/data_planet_dsc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/image_mergin"
+        />
 
 </LinearLayout>

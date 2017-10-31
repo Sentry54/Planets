@@ -35,6 +35,8 @@
     <string name="txt_dsc_uranus">Уран WOW</string>
     <string name="txt_dsc_neptune">Нептун WOW</string>
 
+    <string name="txt_data_btn_positive">Назад</string>
+
     <!--Arrays-->
     <string-array name="txt_array_planets">
         <item>@string/txt_mercury</item>
