@@ -1,0 +1,72 @@
+<resources>
+    <!--App_name-->
+    <string name="app_name">Планеты</string>
+
+    <!--Menu_string-->
+    <string name="action_settings">Настройки</string>
+
+    <!--Tabs_string-->
+    <string name="tabs_1">ListView</string>
+    <string name="tabs_2">GridView</string>
+    <string name="tabs_3">Spinner</string>
+
+    <!--Number of the pages-->
+    <integer name="number_pages">3</integer>
+
+    <!--Application_string-->
+    <string name="txt_mercury">Меркурий</string>
+    <string name="txt_venus">Венера</string>
+    <string name="txt_earth">Земля</string>
+    <string name="txt_mars">Марс</string>
+    <string name="txt_jupiter">Юпитер</string>
+    <string name="txt_saturn">Сатурн</string>
+    <string name="txt_uranus">Уран</string>
+    <string name="txt_neptune">Нептун</string>
+
+    <string name="txt_dsc_mercury">
+        Это ближайшая к Солнцу планета Солнечной системы.
+        Планета названа в честь древнеримского бога торговли — быстрого Меркурия, поскольку она движется по небесной сфере быстрее других планет.
+    </string>
+    <string name="txt_dsc_venus">Венера WOW</string>
+    <string name="txt_dsc_earth">Земля WOW</string>
+    <string name="txt_dsc_mars">Марс WOW</string>
+    <string name="txt_dsc_jupiter">Юпитер WOW</string>
+    <string name="txt_dsc_saturn">Сатурн WOW</string>
+    <string name="txt_dsc_uranus">Уран WOW</string>
+    <string name="txt_dsc_neptune">Нептун WOW</string>
+
+    <!--Arrays-->
+    <string-array name="txt_array_planets">
+        <item>@string/txt_mercury</item>
+        <item>@string/txt_venus</item>
+        <item>@string/txt_earth</item>
+        <item>@string/txt_mars</item>
+        <item>@string/txt_jupiter</item>
+        <item>@string/txt_saturn</item>
+        <item>@string/txt_uranus</item>
+        <item>@string/txt_neptune</item>
+    </string-array>
+
+    <string-array name="txt_array_dsc_planets">
+        <item>@string/txt_dsc_mercury</item>
+        <item>@string/txt_dsc_venus</item>
+        <item>@string/txt_dsc_earth</item>
+        <item>@string/txt_dsc_mars</item>
+        <item>@string/txt_dsc_jupiter</item>
+        <item>@string/txt_dsc_saturn</item>
+        <item>@string/txt_dsc_uranus</item>
+        <item>@string/txt_dsc_neptune</item>
+    </string-array>
+
+    <array name="array_img_planet">
+        <item>@drawable/img_mercury</item>
+        <item>@drawable/img_venus</item>
+        <item>@drawable/img_earth</item>
+        <item>@drawable/img_mars</item>
+        <item>@drawable/img_jupiter</item>
+        <item>@drawable/img_saturn</item>
+        <item>@drawable/img_uranus</item>
+        <item>@drawable/img_neptune</item>
+    </array>
+
+</resources>
