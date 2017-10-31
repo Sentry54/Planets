@@ -60,7 +60,7 @@
         <item>@string/txt_dsc_neptune</item>
     </string-array>
 
-    <array name="array_img_planet">
+    <integer-array name="array_img_planet">
         <item>@drawable/img_mercury</item>
         <item>@drawable/img_venus</item>
         <item>@drawable/img_earth</item>
@@ -69,6 +69,6 @@
         <item>@drawable/img_saturn</item>
         <item>@drawable/img_uranus</item>
         <item>@drawable/img_neptune</item>
-    </array>
+    </integer-array>
 
 </resources>

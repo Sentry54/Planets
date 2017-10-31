@@ -66,8 +66,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id) {
+            case R.id.action_settings:
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -123,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static ArrayList<Profile> loadData() {
         for (int i = 0; i < listNamePlanets.size(); i++) {
-            plants.add(new Profile(listImgPlanets.getResourceId(i, 0), listNamePlanets.get(i), listDscPlanets.get(i)));
+            plants.add(new Profile(listImgPlanets.getResourceId(i, -1), listNamePlanets.get(i), listDscPlanets.get(i)));
         }
         return plants;
     }
@@ -143,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 3; //res.getInteger(R.integer.number_pages);
+            return res.getInteger(R.integer.number_pages);
         }
 
         @Override
