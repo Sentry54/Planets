@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(mViewPager);
     }
 
-    private void initData() {
+    public void initData() {
+        res = getResources();
         listNamePlanets = new ArrayList<>(Arrays.asList(res.getStringArray(R.array.txt_array_planets)));
         listDscPlanets = new ArrayList<>(Arrays.asList(res.getStringArray(R.array.txt_array_dsc_planets)));
         listImgPlanets = res.obtainTypedArray(R.array.array_img_planet);
@@ -97,12 +99,12 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     rootView = inflater.inflate(R.layout.fragment_tab_1, container, false);
                     ListView lv = (ListView) rootView.findViewById(R.id.listView);
-                    ListViewAdapter lvAdapter = new ListViewAdapter(loadData());
+                    final ListViewAdapter lvAdapter = new ListViewAdapter(loadData());
                     lv.setAdapter(lvAdapter);
                     lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                            Profile selectedProfile = (Profile) parent.getSelectedItem();
+                            Profile selectedProfile = (Profile) lvAdapter.getItem(position);
                             DataFragment dataFragment = DataFragment.newInstance(selectedProfile);
                             dataFragment.show(getFragmentManager(), "dataFragment");
                         }
@@ -124,8 +126,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static ArrayList<Profile> loadData() {
         for (int i = 0; i < listNamePlanets.size(); i++) {
-            plants.add(new Profile(listImgPlanets.getResourceId(i, -1), listNamePlanets.get(i), listDscPlanets.get(i)));
+            plants.add(new Profile(listImgPlanets.getResourceId(i,0), listNamePlanets.get(i), listDscPlanets.get(i)));
         }
+        listImgPlanets.recycle();
         return plants;
     }
 

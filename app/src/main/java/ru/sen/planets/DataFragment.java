@@ -31,7 +31,7 @@ public class DataFragment extends AppCompatDialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View dataView = inflater.inflate(R.layout.data_layout, null);
+        View dataView = inflater.inflate(R.layout.data_layout,null);
 
         ImageView dataImagePlanet = (ImageView) dataView.findViewById(R.id.data_imageView);
         dataImagePlanet.setImageResource(getArguments().getInt(mPlanetImage));
@@ -44,7 +44,7 @@ public class DataFragment extends AppCompatDialogFragment {
                 .setPositiveButton(getString(R.string.txt_data_btn_positive), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        getDialog().cancel(); ;
+                        //getDialog().cancel(); ;
                     }
                 });
 

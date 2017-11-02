@@ -23,10 +23,7 @@
     <string name="txt_uranus">Уран</string>
     <string name="txt_neptune">Нептун</string>
 
-    <string name="txt_dsc_mercury">
-        Это ближайшая к Солнцу планета Солнечной системы.
-        Планета названа в честь древнеримского бога торговли — быстрого Меркурия, поскольку она движется по небесной сфере быстрее других планет.
-    </string>
+    <string name="txt_dsc_mercury">Меркурий WOW</string>
     <string name="txt_dsc_venus">Венера WOW</string>
     <string name="txt_dsc_earth">Земля WOW</string>
     <string name="txt_dsc_mars">Марс WOW</string>
@@ -48,6 +45,7 @@
         <item>@string/txt_uranus</item>
         <item>@string/txt_neptune</item>
     </string-array>
+
 
     <string-array name="txt_array_dsc_planets">
         <item>@string/txt_dsc_mercury</item>
